@@ -7,8 +7,13 @@
 # By accessing, using, copying or modifying this work you indicate your
 # agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
 # not expressly granted therein are reserved by Shotgun Software Inc.
+import sys
 
-import collections
+if sys.version_info.major == 3 and sys.version_info.minor >= 10:
+    import collections.abc as collections
+else:
+    import collections
+
 import sgtk
 import copy
 
